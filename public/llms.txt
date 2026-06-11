@@ -1,0 +1,24 @@
+# Athena Data
+
+> Women-owned data consultancy specializing in data migration, data modernization, and data governance. Microsoft-certified architects, engineers, and governance specialists serving enterprise clients across North America.
+
+## About
+Athena Data is a certified women-owned (WBE) consultancy of senior Microsoft-certified data practitioners. We engineer trusted data foundations for organizations that cannot afford to get their data wrong.
+
+## Core specializations
+- Data Migration: end-to-end migration from legacy databases and on-premise estates to modern cloud platforms with zero data loss, validated lineage, and minimal downtime.
+- Data Modernization: re-platforming and re-architecting onto Azure, Microsoft Fabric, and modern lakehouse patterns to enable analytics and AI.
+- Data Governance: policy, stewardship, lineage, quality, and compliance frameworks built into daily operations.
+
+## Supporting practices
+- Database design & tuning
+- Business intelligence
+- Data architecture
+- Data profiling & modeling
+
+## Pages
+- [Home](https://athena-data-data-devs.lovable.app/): overview of capabilities, approach, and contact.
+
+## Contact
+- Email: info@athena-dataservices.com
+- Coverage: North America
