@@ -37,13 +37,11 @@ export default function Index() {
           <a href="#top" className="flex items-center">
             <Logo variant="light" />
           </a>
-
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-primary-foreground/70">
-            <a href="#services"  className="hover:text-primary-foreground transition-colors">Services</a>
-            <a href="#approach"  className="hover:text-primary-foreground transition-colors">Approach</a>
-            <a href="#about"     className="hover:text-primary-foreground transition-colors">About</a>
-            <a href="#contact"   className="hover:text-primary-foreground transition-colors">Contact</a>
+            <a href="#services" className="hover:text-primary-foreground transition-colors">Services</a>
+            <a href="#approach" className="hover:text-primary-foreground transition-colors">Approach</a>
+            <a href="#about"    className="hover:text-primary-foreground transition-colors">About</a>
+            <a href="#contact"  className="hover:text-primary-foreground transition-colors">Contact</a>
           </nav>
           <a
             href="#contact"
@@ -52,8 +50,6 @@ export default function Index() {
           >
             Start a conversation
           </a>
-
-          {/* Mobile hamburger */}
           <button
             className="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5"
             onClick={() => setMenuOpen((v) => !v)}
@@ -64,8 +60,6 @@ export default function Index() {
             <span className={`block h-0.5 w-6 bg-primary-foreground transition-all duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
           </button>
         </div>
-
-        {/* Mobile dropdown */}
         {menuOpen && (
           <div className="md:hidden border-t border-white/10 bg-primary/98 px-6 py-4 flex flex-col gap-1">
             {[
@@ -102,11 +96,11 @@ export default function Index() {
         style={{ background: "var(--gradient-hero)" }}
       >
         <img
-          src={heroImg}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover opacity-10"
-        />
+  src={heroImg}
+  alt=""
+  aria-hidden="true"
+  className="absolute inset-0 h-full w-full object-cover opacity-10"
+/>
         <div className="relative z-10 container mx-auto px-6 py-16 lg:py-20">
           <div className="max-w-5xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 px-4 py-1.5 mb-6"
@@ -200,8 +194,6 @@ export default function Index() {
       {/* ── Approach ── */}
       <section id="approach" className="py-28" style={{ background: "var(--gradient-hero)" }}>
         <div className="container mx-auto px-6">
-
-          {/* Header — stacked, description under title */}
           <div className="max-w-2xl mb-16">
             <span
               className="inline-block px-3 py-1 rounded-full border border-gold/30 text-xs font-semibold tracking-wider uppercase mb-4"
@@ -219,8 +211,6 @@ export default function Index() {
               specialists who reduce risk in the parts of the project that matter most.
             </p>
           </div>
-
-          {/* Step boxes — original dark style */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {approach.map((step, i) => (
               <div
@@ -239,7 +229,6 @@ export default function Index() {
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
@@ -269,8 +258,6 @@ export default function Index() {
                 and deliver with confidence.
               </p>
             </div>
-
-            {/* Right — credential highlights */}
             <div className="space-y-4">
               {aboutHighlights.map((h) => (
                 <div
@@ -377,8 +364,6 @@ export default function Index() {
                   placeholder="Source platform, target platform, timeline…"
                 />
               </div>
-
-              {/* Status messages */}
               {status === "success" && (
                 <div className="rounded-lg px-4 py-3 text-sm font-medium" style={{ background: "oklch(0.72 0.13 75 / 0.15)", color: "var(--gold)", border: "1px solid oklch(0.72 0.13 75 / 0.3)" }}>
                   ✅ Message sent! We'll be in touch within one business day.
@@ -389,7 +374,6 @@ export default function Index() {
                   ⚠️ {errorMsg}
                 </div>
               )}
-
               <button
                 type="submit"
                 disabled={status === "sending" || status === "success"}
@@ -420,111 +404,30 @@ export default function Index() {
 /* ── Data ── */
 
 const heroBadges = [
-  {
-    icon: "⚡",
-    label: "20+ years in enterprise data",
-    sub: "Hands-on delivery across complex data estates",
-  },
-  {
-    icon: "🎯",
-    label: "Microsoft-certified specialists",
-    sub: "Azure Data, Microsoft Fabric, SQL Server",
-  },
-  {
-    icon: "🔒",
-    label: "Zero tolerance for data loss",
-    sub: "Every migration fully profiled, mapped & validated",
-  },
+  { icon: "⚡", label: "20+ years in enterprise data",      sub: "Hands-on delivery across complex data estates" },
+  { icon: "🎯", label: "Microsoft-certified specialists",   sub: "Azure Data, Microsoft Fabric, SQL Server" },
+  { icon: "🔒", label: "Zero tolerance for data loss",      sub: "Every migration fully profiled, mapped & validated" },
 ];
 
 const services = [
-  {
-    icon: "🔄",
-    title: "Data migration and cutover support",
-    description:
-      "Support for source profiling, mapping, reconciliation, cutover planning, and post-migration validation.",
-  },
-  {
-    icon: "🏢",
-    title: "Legacy to CRM Dynamics migration",
-    description:
-      "Migration support for organizations moving from legacy systems into Microsoft Dynamics and related business platforms.",
-  },
-  {
-    icon: "☁️",
-    title: "Data modernization",
-    description:
-      "Modernization of data flows, reporting pipelines, and platform components across SQL Server, Azure Data, and Microsoft Fabric.",
-  },
-  {
-    icon: "🛡️",
-    title: "Data governance and validation",
-    description:
-      "Practical governance, controls, reconciliation, and documentation that improve trust in the target environment.",
-  },
-  {
-    icon: "🤝",
-    title: "Prime subcontract support",
-    description:
-      "Specialist delivery support for primes that need short-term, senior migration expertise on modernization programs.",
-  },
-  {
-    icon: "📋",
-    title: "Regulatory reporting data support",
-    description:
-      "Support for the data preparation, validation, reconciliation, and traceability behind regulatory reporting. When reports are tied to compliance obligations, Athena Data helps ensure the underlying data is accurate, defensible, and ready for audit or review.",
-  },
+  { icon: "🔄", title: "Data migration and cutover support",    description: "Support for source profiling, mapping, reconciliation, cutover planning, and post-migration validation." },
+  { icon: "🏢", title: "Legacy to CRM Dynamics migration",      description: "Migration support for organizations moving from legacy systems into Microsoft Dynamics and related business platforms." },
+  { icon: "☁️", title: "Data modernization",                    description: "Modernization of data flows, reporting pipelines, and platform components across SQL Server, Azure Data, and Microsoft Fabric." },
+  { icon: "🛡️", title: "Data governance and validation",        description: "Practical governance, controls, reconciliation, and documentation that improve trust in the target environment." },
+  { icon: "🤝", title: "Prime subcontract support",             description: "Specialist delivery support for primes that need short-term, senior migration expertise on modernization programs." },
+  { icon: "📋", title: "Regulatory reporting data support",     description: "Support for the data preparation, validation, reconciliation, and traceability behind regulatory reporting. When reports are tied to compliance obligations, Athena Data helps ensure the underlying data is accurate, defensible, and ready for audit or review." },
 ];
 
 const approach = [
-  {
-    title: "Discover",
-    description:
-      "Working sessions with stakeholders map the data landscape, business priorities, dependencies, and migration risks.",
-  },
-  {
-    title: "Design",
-    description:
-      "A pragmatic target state and sequenced roadmap define what should be modernized, what should be preserved, and how risk will be managed.",
-  },
-  {
-    title: "Deliver",
-    description:
-      "Senior specialists work alongside client teams to migrate, modernize, reconcile, and validate with clear accountability and measurable outcomes.",
-  },
-  {
-    title: "Sustain",
-    description:
-      "Governance, observability, documentation, and enablement help the platform remain stable and useful after delivery.",
-  },
-];
-
-const aboutBadges = [
-  "Women-owned & operated",
-  "Microsoft-certified specialists",
-  "Seasoned practitioners only",
-  "Outcome-based engagements",
+  { title: "Discover", description: "Working sessions with stakeholders map the data landscape, business priorities, dependencies, and migration risks." },
+  { title: "Design",   description: "A pragmatic target state and sequenced roadmap define what should be modernized, what should be preserved, and how risk will be managed." },
+  { title: "Deliver",  description: "Senior specialists work alongside client teams to migrate, modernize, reconcile, and validate with clear accountability and measurable outcomes." },
+  { title: "Sustain",  description: "Governance, observability, documentation, and enablement help the platform remain stable and useful after delivery." },
 ];
 
 const aboutHighlights = [
-  {
-    icon: "🗄️",
-    title: "Deep Microsoft platform expertise",
-    detail: "Hands-on delivery across Azure Data, Microsoft Fabric, SQL Server, CRM Dynamics, Power BI, and ETL tooling — not advisory, but execution.",
-  },
-  {
-    icon: "✅",
-    title: "Senior specialists only",
-    detail: "Every engagement is staffed by experienced practitioners. The people who scope the work are the people who do the work.",
-  },
-  {
-    icon: "📐",
-    title: "Proven on complex programs",
-    detail: "Brought in when the data is messy, timelines are tight, and accuracy is non-negotiable — including government and prime-contractor engagements.",
-  },
-  {
-    icon: "👩‍💼",
-    title: "Women-owned and operated",
-    detail: "A focused practice founded and led by women with decades of hands-on data engineering experience.",
-  },
+  { icon: "🗄️", title: "Deep Microsoft platform expertise",  detail: "Hands-on delivery across Azure Data, Microsoft Fabric, SQL Server, CRM Dynamics, Power BI, and ETL tooling — not advisory, but execution." },
+  { icon: "✅",  title: "Senior specialists only",           detail: "Every engagement is staffed by experienced practitioners. The people who scope the work are the people who do the work." },
+  { icon: "📐",  title: "Proven on complex programs",        detail: "Brought in when the data is messy, timelines are tight, and accuracy is non-negotiable — including government and prime-contractor engagements." },
+  { icon: "👩‍💼", title: "Women-owned and operated",          detail: "A focused practice founded and led by women with decades of hands-on data engineering experience." },
 ];
